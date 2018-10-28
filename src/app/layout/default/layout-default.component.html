@@ -1,0 +1,13 @@
+<nz-layout>
+  <nz-header>
+    <layout-header></layout-header>
+  </nz-header>
+  <nz-layout>
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzWidth]="width" [nzReverseArrow]="isReverseArrow">
+      <layout-sidebar></layout-sidebar>
+    </nz-sider>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

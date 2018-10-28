@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## 从git上下载源码后
+
+运行 `npm install` 来为项目安装需要的包
+
+## 发包
+
+运行 `ng build --prod --base-href=/admin/` 来打包
+
+## 使用代理
+
+    ng serve --proxy-config proxy.config.json
