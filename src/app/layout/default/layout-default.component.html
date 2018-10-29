@@ -1,12 +1,12 @@
 <nz-layout>
-  <nz-header>
+  <nz-header style="padding:0;">
     <layout-header></layout-header>
   </nz-header>
   <nz-layout>
-    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzWidth]="width" [nzReverseArrow]="isReverseArrow">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzWidth]="width">
       <layout-sidebar></layout-sidebar>
     </nz-sider>
-    <nz-content>
+    <nz-content style="min-height: calc(100vh - 64px);">
       <router-outlet></router-outlet>
     </nz-content>
   </nz-layout>

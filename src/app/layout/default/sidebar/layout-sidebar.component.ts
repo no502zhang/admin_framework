@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout-sidebar.component.css']
 })
 export class LayoutSidebarComponent implements OnInit {
+  isCollapsed = false;
 
   constructor() { }
 

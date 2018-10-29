@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutDefaultComponent implements OnInit {
   isCollapsed = false;
-  isReverseArrow = false;
   width = 240;
 
   constructor() { }
