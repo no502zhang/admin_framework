@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Menu } from 'src/app/core/menu.model';
+import { MenuService } from 'src/app/core/menu.service';
+
 @Component({
   selector: 'layout-default',
   templateUrl: './layout-default.component.html',
@@ -7,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutDefaultComponent implements OnInit {
   isCollapsed = false;
+  sideMenus: Menu[];
 
-  constructor() { }
+  constructor(private menuService: MenuService) { }
 
   ngOnInit() {
+    this.getSideMenus();
   }
 
+  getSideMenus() {
+    this.menuService.getMenus('sidebar').subscribe(menus => this.sideMenus = menus);
+  }
 }
