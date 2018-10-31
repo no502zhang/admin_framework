@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 
 import { Menu } from './menu.model';
 
-import { HEADER_MENUS, SIDEBAR_MENUS } from '../../../mock/menu';
+import { HEADER_MENUS, SIDEBAR_MENUS } from '../../../mock/menu.mock';
 
 @Injectable({
   providedIn: 'root'
