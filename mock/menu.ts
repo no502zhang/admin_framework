@@ -22,3 +22,18 @@ export const SIDEBAR_MENUS: Menu[] = [
         ]
     },
 ]
+
+export const HEADER_MENUS: Menu[] = [
+    {
+        id: "1", parentId: null, type: "sidebar", name: "首页", iconType: "home", link: null, children: null
+    },
+    {
+        id: "2", parentId: null, type: "sidebar", name: "后台", iconType: null, link: null, children: null
+    },
+    {
+        id: "3", parentId: null, type: "sidebar", name: "项目", iconType: null, link: null, children: [
+            { id: "4", parentId: "3", type: "sidebar", name: "需求", iconType: null, link: null, children: null },
+            { id: "5", parentId: "3", type: "sidebar", name: "计划", iconType: null, link: null, children: null },
+        ]
+    },
+]

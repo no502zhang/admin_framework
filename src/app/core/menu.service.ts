@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 
 import { Menu } from './menu.model';
 
-import { SIDEBAR_MENUS } from '../../../mock/menu';
+import { HEADER_MENUS, SIDEBAR_MENUS } from '../../../mock/menu';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +16,8 @@ export class MenuService {
   getMenus(type: string): Observable<Menu[]> {
     if (type == 'sidebar') {
       return of(SIDEBAR_MENUS);
+    } else if (type == 'header') {
+      return of(HEADER_MENUS);
     }
   }
 }

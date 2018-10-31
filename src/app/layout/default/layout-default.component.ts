@@ -11,11 +11,17 @@ import { MenuService } from 'src/app/core/menu.service';
 export class LayoutDefaultComponent implements OnInit {
   isCollapsed = false;
   sideMenus: Menu[];
+  headerMenus: Menu[];
 
   constructor(private menuService: MenuService) { }
 
   ngOnInit() {
+    this.getHeaderMenus();
     this.getSideMenus();
+  }
+
+  getHeaderMenus() {
+    this.menuService.getMenus('header').subscribe(menus => this.headerMenus = menus);
   }
 
   getSideMenus() {
